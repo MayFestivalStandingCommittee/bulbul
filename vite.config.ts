@@ -1,9 +1,15 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
+import { pigment } from "@pigment-css/vite-plugin";
+
+const pigmentConfig = {
+  transformLibraries: ['@mui/material'],
+};
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  // plugins: [react()],
+  plugins: [react(), pigment(pigmentConfig)],
   build: {
     outDir: 'dist', // default の設定と同じ
     lib: {
