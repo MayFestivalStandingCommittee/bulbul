@@ -23,26 +23,12 @@ declare module "@pigment-css/react/theme" {
 }
 
 export const theme = extendTheme({
-  colorSchemes: {
-    light: {
-      colors: {
-        primary: colors.primary[500],
-        text: {
-          primary: colors.text.black,
-          secondary: colors.text.white,
-          red: colors.text.red,
-        },
-      },
-    },
-    dark: {
-      colors: {
-        primary: colors.primary[500],
-        text: {
-          primary: colors.text.white,
-          secondary: colors.text.black,
-          red: colors.text.red,
-        },
-      },
+  colors: {
+    primary: colors.primary[500],
+    text: {
+      primary: colors.text.black,
+      secondary: colors.text.white,
+      red: colors.text.red,
     },
   },
 });
