@@ -1,12 +1,12 @@
 import { Button as BaseButton } from "@mui/base";
 import { styled } from "@pigment-css/react";
 
-const StyledButton = styled(BaseButton)(() => ({
-  backgroundColor: "blue",
+const StyledButton = styled(BaseButton)(({ theme }) => ({
+  backgroundColor: theme.colors.primary,
   color: "white",
   padding: "10px 20px",
   border: "none",
-  borderRadius: "5px",
+  borderRadius: "100vmax",
   cursor: "pointer",
   "&:disabled": {
     backgroundColor: "gray",

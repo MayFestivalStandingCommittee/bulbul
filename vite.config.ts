@@ -1,8 +1,10 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
-import { pigment } from "@pigment-css/vite-plugin";
+import { pigment, PigmentOptions } from "@pigment-css/vite-plugin";
+import { theme } from "./src/assets/theme";
 
-const pigmentConfig = {
+const pigmentConfig: PigmentOptions = {
+  theme,
   transformLibraries: ["@mui/base"],
 };
 
