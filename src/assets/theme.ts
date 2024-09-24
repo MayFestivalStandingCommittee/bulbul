@@ -1,10 +1,16 @@
 import type { ExtendTheme } from "@pigment-css/react/theme";
-import { extendTheme } from "@pigment-css/react/utils";
+import { extendTheme } from "@pigment-css/vite-plugin";
+import { colors } from "./colors";
 
 declare module "@pigment-css/react/theme" {
   interface ThemeTokens {
     colors: {
       primary: string;
+      text: {
+        primary: string;
+        secondary: string;
+        red: string;
+      };
     };
   }
 
@@ -17,7 +23,26 @@ declare module "@pigment-css/react/theme" {
 }
 
 export const theme = extendTheme({
-  colors: {
-    primary: "#56abdb",
+  colorSchemes: {
+    light: {
+      colors: {
+        primary: colors.primary[500],
+        text: {
+          primary: colors.text.black,
+          secondary: colors.text.white,
+          red: colors.text.red,
+        },
+      },
+    },
+    dark: {
+      colors: {
+        primary: colors.primary[500],
+        text: {
+          primary: colors.text.white,
+          secondary: colors.text.black,
+          red: colors.text.red,
+        },
+      },
+    },
   },
 });

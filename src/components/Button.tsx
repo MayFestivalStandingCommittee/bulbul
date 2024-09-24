@@ -1,5 +1,6 @@
 import { Button as BaseButton } from "@mui/base";
 import { styled } from "@pigment-css/react";
+import { colors } from "../assets/colors";
 
 const StyledButton = styled(BaseButton)(({ theme }) => ({
   backgroundColor: theme.colors.primary,
@@ -12,6 +13,17 @@ const StyledButton = styled(BaseButton)(({ theme }) => ({
     backgroundColor: "gray",
     cursor: "not-allowed",
   },
+  variants: [
+    {
+      props: { disabled: false },
+      style: {
+        "&:hover": {
+          backgroundColor: colors.primary[600],
+          transition: "background-color 0.1s",
+        },
+      },
+    },
+  ],
 }));
 
 export const Button = ({ children, disabled, onClick }: ButtonProps) => {
