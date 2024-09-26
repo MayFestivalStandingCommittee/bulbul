@@ -1,4 +1,5 @@
 import type { Preview } from "@storybook/react";
+import "@pigment-css/react/styles.css";
 
 const preview: Preview = {
   parameters: {
